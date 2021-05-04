@@ -1,8 +1,18 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "allowJs": false,
-    "target": "es5"
+    "target": "es2017",
+    "module": "commonjs",
+    "outDir": "./build",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*", "environment.d.ts", "utils.d.ts"],
+  "exclude": ["./build", "node_modules", "./dist"]
 }
